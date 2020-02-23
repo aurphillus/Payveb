@@ -1,0 +1,144 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card" style="margin-left:110px;width:120%;">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">Dealer Profile</h4>
+            <p class="card-category"></p>
+          </div>
+          <div class="card-body">
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Organization Name</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.organization_name}}
+                  </div>
+                </div>
+              </div>
+    <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Product Category</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.product_category}}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Fist Name</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.first_name}}
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Last Name</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.last_name}}
+                  </div>
+                </div>
+      <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">GST Number</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.gst_number}}
+                  </div>
+                </div>
+              </div>
+     <div class="row">
+    <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Personal Email Address</label>
+                    <!-- <input type="email" class="form-control"> -->
+                    {{form.personal_email}}
+                  </div>
+                </div>
+      <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Organization Email Address</label>
+                    <!-- <input type="email" class="form-control"> -->
+                    {{form.company_email}}
+                  </div>
+                </div>
+      </div>
+       <div class="row">
+       <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Phone (Personal)</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.personal_phone}}
+                  </div>
+                </div>
+      <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Organization Phone</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.organization_phone}}
+                  </div>
+                </div>
+      </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Address</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.address}}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">City</label>
+                    {{form.city}}
+                    <!-- <input type="text" class="form-control"> -->
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">State</label>
+                    {{form.state}}
+                    <!-- <input type="text" class="form-control"> -->
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Postal Code</label>
+                    <!-- <input type="text" class="form-control"> -->
+                    {{form.postal_code}}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>About Organization</label>
+                    <div class="form-group">
+                      {{form.about}}
+                      <!-- <textarea class="form-control" rows="5"></textarea> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary pull-right">Add Profile</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
